@@ -56,6 +56,7 @@ const Home = () => {
                                     <Link
                                         class="btn btn-danger mx-2"
                                         onClick={() => deleteUser(user.id)}
+                                        to="/curd"
                                     >
                                         Delete
                                     </Link>

@@ -3,12 +3,16 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { BrowserRouter } from "react-router-dom";
+import { createStore } from "redux";
+import { Provider } from "react-redux";
+import rootReducer from "./components/redux/Services/Reducers/index";
+const store = createStore(rootReducer);
+// console.warn("store :", store);
 
 ReactDOM.render(
-    <BrowserRouter>
+    <Provider store={store}>
         <App />
-    </BrowserRouter>,
+    </Provider>,
     document.getElementById("root")
 );
 
